@@ -2,3 +2,39 @@ body {
     background-color: #212529;
     overflow: hidden;
 }
+
+div.mainContent {
+    margin-left: 180px;
+    padding: 16px;
+    color: white;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+}
+
+div.mainContent::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+div.mainContent::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+    border-radius: 30px;
+}
+
+div.mainContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    div.mainContent {
+        margin-left: 0;
+        z-index: -1;
+        top: 92px;
+        height: 70%;
+    }
+}
